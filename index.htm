@@ -342,12 +342,13 @@
 
         /* Team Members Grid */
         .team-members {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             gap: 3rem;
             margin-top: 3rem;
             width: 100%;
-            max-width: 900px;
+            max-width: 1000px;
         }
 
         .team-member {
@@ -356,6 +357,7 @@
             align-items: center;
             text-align: center;
             transition: all 0.3s ease;
+            flex: 0 0 auto;
         }
 
         .team-member:hover {
@@ -363,8 +365,8 @@
         }
 
         .team-member-photo {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             overflow: hidden;
             margin-bottom: 1rem;
@@ -387,14 +389,14 @@
         }
 
         .team-member-name {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: bold;
             color: #4ecdc4;
             margin-bottom: 0.5rem;
         }
 
         .team-member-role {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #ccc;
             line-height: 1.4;
         }
@@ -461,19 +463,39 @@
             }
 
             .team-members {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
                 gap: 2rem;
             }
 
             .team-member-photo {
-                width: 120px;
-                height: 120px;
+                width: 100px;
+                height: 100px;
+            }
+
+            .team-member-name {
+                font-size: 1.1rem;
+            }
+
+            .team-member-role {
+                font-size: 0.9rem;
             }
         }
 
-        @media (max-width: 640px) {
+        @media (max-width: 480px) {
             .team-members {
-                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .team-member-photo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .team-member-name {
+                font-size: 1rem;
+            }
+
+            .team-member-role {
+                font-size: 0.85rem;
             }
         }
 
